@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+ body{
+    background-color: #e3e3e3;
+} 
+
+/*utilizando classes universais, onde elas serão utilizadas varias vezes durante o projeto*/
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto; /*centralizando o conteudo com uma div*/
+    padding: 0 4%;
+}
+
+/* estilo do header */
+
+header{
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 9999999;
+}
+
+/* estilos gerais */
+
+header .interface{
+    display: flex;
+    justify-content: space-between;  /* cada elemento vai para o seu canto */
+    align-items: center; /* centraliza o alinhamento horizontal dos itens */
+}
+
+header .btn-contato button, .hero-site button, .hoteis button{
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+header .btn-contato button:hover, .hero-site button:hover, .hoteis button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilo do botão menu mobile */
+
+header .btn-menu-mob{
+    display: none;
+    position: relative;
+    z-index: 999999999;
+}
+
+header .btn-menu-mob div{
+    background-color: #fff;
+    height: 3px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+header .btn-menu-mob .line-menumob-1{
+    width: 30px;
+}
+
+header .btn-menu-mob .line-menumob-2{
+    width: 19px;
+}
+
+
+header.rolar .btn-menu-mob div{
+    background-color: #000;
+}
+
+header .btn-menu-mob .line-menumob-1.ativo1{
+    transform: rotate(47deg) translate(29%);
+    background-color: #fff;
+}
+
+header .btn-menu-mob .line-menumob-2.ativo2{
+    transform: rotate(-47deg) translate(29%);
+    width: 30px;
+    background-color: #fff;
+}
+
+/* Estilo menu dinamico */
+
+header .logo .logo-preta{
+    display: none;
+}
+
+header.rolar .menu-desktop nav ul li a{
+    color: #ffffff;
+}
+
+header.rolar .btn-contato button{
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+header.rolar .btn-contato button:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header.rolar .logo .logo-branca{
+    display: none;
+}
+
+header.rolar .logo .logo-preta{
+    display: block;
+}
+
+header.rolar{
+        background-color: #000000;
+        box-shadow: 0 0 8px #00000035;
+}
+/* ---------------------- */
+
+header .logo img{
+    max-width: 40px;
+}
+
+header .menu-desktop nav ul{
+    list-style-type: none;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header .menu-desktop nav ul li a{
+    color: #000000;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.menu-desktop nav a:hover{
+    transform: scale(1.05);
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+}
+
+/* Estilo do menuzinho mobile  */
+
+header .menu-mobile{
+    width: 0;
+    height: 0;
+    background-color: #000000f3;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+header .menu-mobile nav ul{
+    list-style-type: none;
+}
+
+header .menu-mobile nav{
+    width: 90%;
+}
+
+header .menu-mobile nav a{
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+header .menu-mobile nav a:hover{
+   background-color: #fff;
+   color: #000;
+   box-shadow: 0 0 20px #fff;
+}
+
+header .menu-mobile.abrir{
+    width: 100%;
+    height: 100vh;
+}
+
+body.no-overflow{
+    overflow: hidden;
+}
+
+/* Estilo do Hero do site */
+
+section.hero-site{
+    height: 98vh;
+    background-image: url(../images/img-fundo-unhas-bp-opacity.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    z-index: 1;
+}
+
+.hero-site .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 6em;
+    line-height: 70px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span{
+    display: block;
+    font-weight: 500;
+}
+
+.hero-site .txt-hero{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero-site .txt-hero p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hero-site .txt-hero p span{
+    display: block;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* Estilo da sessão vantagens */
+
+section.vantagens{
+    padding: 80px 0px;
+}
+
+.vantagens .itens-container{
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.vantagens .itens-container .img-itens img{
+    max-width: 480px;
+}
+
+.vantagens .itens-container .txt-itens h3{
+    font-size: 3em;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagens .itens-container .txt-itens h3 span{
+    font-weight: 300;
+}
+
+/* Estilo do contato */
+
+section.contato{
+    background-color: #fff;
+    padding: 80px 0px;
+}
+
+.txt-contato, .icons-contato{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: middle;
+}
+
+.contato .txt-contato h3{
+    font-size: 2.5em;
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contato .txt-contato h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.contato .icons-contato a{
+    text-decoration: none;
+}
+
+.contato .icons-contato button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    width: 60%;
+    height: 60px;
+    margin: 0 auto 20px auto;
+    background-color: transparent;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contato .icons-contato button:hover{
+   background-color: #000;
+}
+
+.contato .icons-contato button:hover i, .contato .icons-contato button:hover p{
+    color: #fff;
+}
+ 
+
+.contato .icons-contato button i{
+    font-size: 22px;
+}
+
+/* Estilo da sessão hoteis */
+
+section.hoteis{
+    height: 600px;
+    background-image: url(../images/hotel-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.hoteis > .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000ea;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hoteis > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.hoteis h3{
+    font-size: 3em;
+    line-height: 50px;
+    font-weight: 200;
+}
+
+.hoteis h3 span{
+    display: block;
+    font-weight: 600;
+}
+
+.hoteis p{
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+.hoteis button{
+    width: 220px;
+    height: 60px;
+}
+
+/* Estilo sessão como funciona  */
+section.como-funciona{
+    padding: 80px 0;
+}
+
+.txt-funciona, .instrucoes{
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.como-funciona .txt-funciona{
+    position: sticky;
+    top: 50%;
+    padding-bottom: 49px;
+}
+
+.como-funciona .txt-funciona h3{
+    font-size: 4em;
+    line-height: 60px;
+    font-weight: 300;
+
+}
+
+.como-funciona .txt-funciona h3 span{
+    display: block;
+    font-weight: 700;
+}
+
+.instrucoes .instru-box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid #000;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+
+.instrucoes .instru-box img{
+    max-width: 100px;
+   
+}    
+
+.instrucoes .instru-box h4{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.instrucoes .instru-box h4 span{
+    font-weight: 300;
+}
+
+.instrucoes .instru-box p{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* Estilo de sessão Footer */
+
+footer{
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .top-footer button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+footer .top-footer button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+footer .middle-footer a{
+    color: #fff;
+    margin: 0 15px;
+}
+
+.middle-footer{
+    margin: 15px 0;
+}
+
+footer .bottom-footer p{
+    color: #fff;
+    margin-top: 20px ;
+}
+
+.bottom-footer{
+    border-top: 2px solid #fff;
+    
+}

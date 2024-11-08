@@ -1,0 +1,147 @@
+@media screen and (max-width:900px){
+    header .menu-desktop, header .btn-contato{
+        display: none;
+    }
+
+    header .btn-menu-mob{
+        display: block;
+    }
+
+}
+
+
+
+@media screen and (max-width:878px){
+    
+/* Responsivo da Hero */
+
+.hero-site .txt-hero{
+    text-align: center;
+}
+
+.hero-site .txt-hero h1{
+    font-size: 2.3em;
+    line-height: 39px;
+    font-weight: 200;
+}
+
+.hero-site .txt-hero h1 span{
+    display: block;
+    font-weight: 800;
+}
+
+.hero-site .txt-hero p{
+    font-size: 14px;
+}
+
+.hero-site .txt-hero p span{
+    display: inline;
+}
+
+.hero-site button{
+    width: 220px;
+    height: 60px;
+    font-size: 20px;
+}
+
+/* Responsivo das vantagens */
+
+.vantagens .itens-container{
+    flex-direction: column;
+    text-align: center;
+}
+
+.vantagens .itens-container .img-itens img{
+   width: 100%;
+}
+
+.vantagens .itens-container .txt-itens p{
+    margin-bottom: 20px;
+}
+
+.vantagens .itens-container .item-1{
+    order: 1;
+}
+
+.vantagens .itens-container .item-2{
+    order: 0;
+}
+
+/* Responsivo do contato */
+
+    .txt-contato, .icons-contato{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contato .txt-contato h3{
+        font-size: 2em;
+        line-height: 40px;
+    }
+
+    .contato .txt-contato p{
+        margin-bottom: 25px;
+    }
+
+    .contato .icons-contato button{
+        width: 90%;
+    }
+
+/* Responsivo de hoteis */
+
+    .hoteis h3{
+        font-size: 2.5em;
+        line-height: 40px;
+    }
+
+    .hoteis p{
+        font-size: 15px;
+        margin: 20px 0;
+    }
+
+/* Responsivo de como funciona */
+ 
+    .txt-funciona, .instrucoes{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .como-funciona .txt-funciona{
+        position: static;
+    }
+
+    .como-funciona .txt-funciona h3{
+        font-size: 3em;
+        line-height: 50px;
+    }
+
+
+    .instrucoes .instru-box{
+        flex-direction: column;
+    }
+
+
+    .instrucoes .instru-box img{
+        max-width: 100px;
+    }    
+
+/* Responsivo do footer */
+        
+
+    footer .middle-footer a{
+        color: #fff;
+        margin: 15px 0px;
+        display: block;
+    }
+
+    .middle-footer{
+        margin: 15px 0;
+    }
+
+    footer .bottom-footer p{
+        font-size: 14px;
+    }
+
+}
